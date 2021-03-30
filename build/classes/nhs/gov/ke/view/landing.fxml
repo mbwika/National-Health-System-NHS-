@@ -1,0 +1,1741 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="768.0" maxWidth="1366.0" minHeight="768.0" minWidth="1366.0" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nhs.gov.ke.view.LandingController">
+   <center>
+      <AnchorPane id="AnchorPane" maxHeight="768.0" maxWidth="1366.0" minHeight="768.0" minWidth="1366.0" prefHeight="768.0" prefWidth="1366.0">
+         <children>
+            <ImageView fitHeight="768.0" fitWidth="1366.0" layoutX="-2.0" layoutY="-1.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../images/background.jpg" />
+               </image>
+               <effect>
+                  <DropShadow>
+                     <input>
+                        <InnerShadow />
+                     </input>
+                  </DropShadow>
+               </effect>
+            </ImageView>
+            <Button fx:id="backBtn" alignment="CENTER" layoutX="14.0" layoutY="17.0" mnemonicParsing="false" onAction="#back" prefHeight="24.0" prefWidth="53.0" style="-fx-background-radius: 20;">
+               <effect>
+                  <DropShadow>
+                     <input>
+                        <InnerShadow />
+                     </input>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <ImageView disable="true" fitHeight="25.0" fitWidth="46.0" layoutX="18.0" layoutY="17.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../images/back.png" />
+               </image>
+               <effect>
+                  <DropShadow>
+                     <input>
+                        <InnerShadow />
+                     </input>
+                  </DropShadow>
+               </effect>
+            </ImageView>
+            <Button fx:id="exitBtn" layoutX="1300.0" layoutY="17.0" mnemonicParsing="false" onAction="#exit" prefHeight="25.0" prefWidth="51.0" style="-fx-background-radius: 20;">
+               <effect>
+                  <DropShadow>
+                     <input>
+                        <InnerShadow />
+                     </input>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <ImageView disable="true" fitHeight="9.0" fitWidth="13.0" layoutX="1319.0" layoutY="25.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../images/cross-24-128.png" />
+               </image>
+               <effect>
+                  <DropShadow>
+                     <input>
+                        <InnerShadow />
+                     </input>
+                  </DropShadow>
+               </effect>
+            </ImageView>
+            <Pane layoutX="268.0" layoutY="69.0" prefHeight="118.0" prefWidth="827.0" style="-fx-background-radius: 20;">
+               <effect>
+                  <DropShadow>
+                     <input>
+                        <InnerShadow />
+                     </input>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <Label fx:id="title" layoutX="50.0" layoutY="19.0" text="National Health System" textAlignment="CENTER" textFill="AQUA">
+                     <font>
+                        <Font name="Lucida Bright Regular" size="75.0" />
+                     </font>
+                     <effect>
+                        <DropShadow>
+                           <input>
+                              <Glow>
+                                 <input>
+                                    <InnerShadow />
+                                 </input>
+                              </Glow>
+                           </input>
+                        </DropShadow>
+                     </effect>
+                  </Label>
+               </children>
+            </Pane>
+            <Hyperlink fx:id="copyrightStatement" layoutX="439.0" layoutY="726.0" onAction="#copyrightStatementInfo" text="Copyright © 2019. The National Health System (NHS). All rights reserved." textFill="#b5b3b3">
+               <effect>
+                  <DropShadow>
+                     <input>
+                        <Glow />
+                     </input>
+                  </DropShadow>
+               </effect>
+               <font>
+                  <Font name="Modern No. 20" size="18.0" />
+               </font>
+            </Hyperlink>
+            <Button fx:id="homeBtn" layoutX="74.0" layoutY="16.0" mnemonicParsing="false" onAction="#logOut" prefHeight="25.0" prefWidth="54.0" style="-fx-background-radius: 20;">
+               <effect>
+                  <DropShadow>
+                     <input>
+                        <InnerShadow />
+                     </input>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <ImageView disable="true" fitHeight="15.0" fitWidth="17.0" layoutX="93.0" layoutY="20.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../images/lock-24-128.png" />
+               </image>
+               <effect>
+                  <DropShadow>
+                     <input>
+                        <InnerShadow />
+                     </input>
+                  </DropShadow>
+               </effect>
+            </ImageView>
+            <Button fx:id="minimizeStageBtn" layoutX="1242.0" layoutY="17.0" mnemonicParsing="false" onAction="#minimizeStage" prefHeight="25.0" prefWidth="51.0" style="-fx-background-radius: 20;">
+               <effect>
+                  <DropShadow>
+                     <input>
+                        <InnerShadow />
+                     </input>
+                  </DropShadow>
+               </effect>
+               <graphic>
+                  <ImageView disable="true" fitHeight="15.0" fitWidth="19.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/eye-24-128.png" />
+                     </image>
+                     <effect>
+                        <DropShadow>
+                           <input>
+                              <InnerShadow />
+                           </input>
+                        </DropShadow>
+                     </effect>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <TabPane fx:id="DBsTabPane" layoutX="14.0" layoutY="224.0" prefHeight="503.0" prefWidth="1341.0" style="-fx-background-radius: 20;" stylesheets="@../styles/style_1.css" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab fx:id="healthRecordsTab" text="Patient Health Records">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-radius: 20;">
+                           <children>
+                              <TableView fx:id="recordsTable" editable="true" layoutX="231.0" layoutY="14.0" maxHeight="600.0" maxWidth="1.7976931348623157E308" minHeight="100.0" prefHeight="462.0" prefWidth="1108.0" style="-fx-background-radius: 20;">
+                                 <columns>
+                                    <TableColumn id="category" fx:id="category" minWidth="0.0" prefWidth="102.0" text="Category" />
+                                    <TableColumn fx:id="symptoms" minWidth="4.0" prefWidth="347.0" text="Symptoms" />
+                                    <TableColumn fx:id="diagnosis" prefWidth="130.0" text="Diagnosis" />
+                                    <TableColumn fx:id="treatment" prefWidth="124.0" text="Treatment" />
+                                    <TableColumn fx:id="duration" prefWidth="103.0" text="Duration" />
+                                    <TableColumn fx:id="medic" prefWidth="156.0" text="Medic" />
+                                    <TableColumn fx:id="health_facility" minWidth="0.0" prefWidth="158.0" text="Health Facility" />
+                                    <TableColumn minWidth="0.0" prefWidth="1.0" />
+                                    <TableColumn minWidth="0.0" prefWidth="0.0" />
+                                 </columns>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </TableView>
+                              <Button fx:id="searchPersonsBtn1" layoutX="14.0" layoutY="143.0" mnemonicParsing="false" onAction="#searchPatientByName" prefHeight="31.0" prefWidth="182.0" style="-fx-background-radius: 20;" text="Search By Patient No." visible="false">
+                                 <effect>
+                                    <DropShadow>
+                                       <input>
+                                          <InnerShadow />
+                                       </input>
+                                    </DropShadow>
+                                 </effect>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <TitledPane animated="false" layoutX="14.0" layoutY="15.0" prefHeight="459.0" prefWidth="202.0" text="ACTION">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <ImageView fitHeight="432.0" fitWidth="202.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../images/background.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="98.0" fitWidth="101.0" layoutX="50.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../../../nhs/src/nhs/gov/ke/images/red_plus.png" />
+                                             </image>
+                                          </ImageView>
+                                          <TextField fx:id="patientNameField" alignment="CENTER" layoutX="11.0" layoutY="137.0" prefHeight="31.0" prefWidth="182.0" promptText="Search Record" style="-fx-background-radius: 20;">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                             <effect>
+                                                <DropShadow />
+                                             </effect>
+                                          </TextField>
+                                          <Button fx:id="clearPatientBtn" layoutX="9.0" layoutY="328.0" mnemonicParsing="false" onAction="#clearPatient" prefHeight="30.0" prefWidth="182.0" style="-fx-background-radius: 20;" text="Clear Search">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="searchPersonsBtn" layoutX="9.0" layoutY="244.0" mnemonicParsing="false" onAction="#searchPersons" prefHeight="31.0" prefWidth="182.0" style="-fx-background-radius: 20;" text="Search By Patient No.">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="viewEntirePersonsDBBtn1" layoutX="9.0" layoutY="287.0" mnemonicParsing="false" onAction="#searchPatientByName" prefHeight="30.0" prefWidth="182.0" style="-fx-background-radius: 20;" text="Search By Patient Name">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Button>
+                                          <ImageView fitHeight="83.0" fitWidth="106.0" layoutX="45.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <image>
+                                                <Image url="@../images/red_plus.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                                 <effect>
+                                    <DropShadow>
+                                       <input>
+                                          <InnerShadow />
+                                       </input>
+                                    </DropShadow>
+                                 </effect>
+                              </TitledPane>
+                           </children>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab fx:id="newPatientTab" text="Add New Patient">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-radius: 20;">
+                           <effect>
+                              <DropShadow>
+                                 <input>
+                                    <InnerShadow />
+                                 </input></DropShadow>
+                           </effect>
+                           <children>
+                              <TitledPane animated="false" layoutX="364.0" layoutY="32.0" prefHeight="412.0" prefWidth="942.0" text="ADD NEW PATIENT">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="385.0" fitWidth="941.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../images/background.jpg" />
+                           </image>
+                        </ImageView>
+                                          <TextField fx:id="txt_patient_no" layoutX="530.0" layoutY="78.0" prefHeight="25.0" prefWidth="216.0" style="-fx-background-radius: 20;">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="Lucida Fax Regular" size="10.0" />
+                                             </font>
+                                          </TextField>
+                                          <Label layoutX="361.0" layoutY="79.0" style="-fx-background-radius: 20;" text="Patient No.">
+                                             <effect>
+                                                <Lighting>
+                                                   <bumpInput>
+                                                      <Shadow>
+                                                         <input>
+                                                            <Glow />
+                                                         </input>
+                                                      </Shadow>
+                                                   </bumpInput>
+                                                </Lighting>
+                                             </effect>
+                                             <font>
+                                                <Font name="Cambria" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="362.0" layoutY="123.0" style="-fx-background-radius: 20;" text="Full Name:">
+                                             <effect>
+                                                <Lighting>
+                                                   <bumpInput>
+                                                      <Shadow>
+                                                         <input>
+                                                            <Glow />
+                                                         </input>
+                                                      </Shadow>
+                                                   </bumpInput>
+                                                </Lighting>
+                                             </effect>
+                                             <font>
+                                                <Font name="Cambria" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="txt_name" layoutX="530.0" layoutY="121.0" prefHeight="25.0" prefWidth="216.0" style="-fx-background-radius: 20;">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="Lucida Fax" size="12.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField fx:id="txt_national_id" layoutX="530.0" layoutY="169.0" prefHeight="25.0" prefWidth="216.0" style="-fx-background-radius: 20;">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="Lucida Fax" size="12.0" />
+                                             </font>
+                                          </TextField>
+                                          <Label layoutX="361.0" layoutY="170.0" style="-fx-background-radius: 20;" text="National ID No.">
+                                             <effect>
+                                                <Lighting>
+                                                   <bumpInput>
+                                                      <Shadow>
+                                                         <input>
+                                                            <Glow />
+                                                         </input>
+                                                      </Shadow>
+                                                   </bumpInput>
+                                                </Lighting>
+                                             </effect>
+                                             <font>
+                                                <Font name="Cambria" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="361.0" layoutY="216.0" style="-fx-background-radius: 20;" text="Date of Birth">
+                                             <effect>
+                                                <Lighting>
+                                                   <bumpInput>
+                                                      <Shadow>
+                                                         <input>
+                                                            <Glow />
+                                                         </input>
+                                                      </Shadow>
+                                                   </bumpInput>
+                                                </Lighting>
+                                             </effect>
+                                             <font>
+                                                <Font name="Cambria" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="txt_birth_entry" layoutX="530.0" layoutY="214.0" prefHeight="25.0" prefWidth="216.0" style="-fx-background-radius: 20;">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextField>
+                                          <Label layoutX="361.0" layoutY="260.0" style="-fx-background-radius: 20;" text="Password">
+                                             <effect>
+                                                <Lighting>
+                                                   <bumpInput>
+                                                      <Shadow>
+                                                         <input>
+                                                            <Glow />
+                                                         </input>
+                                                      </Shadow>
+                                                   </bumpInput>
+                                                </Lighting>
+                                             </effect>
+                                             <font>
+                                                <Font name="Cambria" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Button fx:id="savePatientDetailsBtn" layoutX="24.0" layoutY="83.0" mnemonicParsing="false" onAction="#savePatientDetails" prefHeight="31.0" prefWidth="182.0" style="-fx-background-radius: 20;" text="Save Patient Details">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="clearDetailsBtn" layoutX="24.0" layoutY="129.0" mnemonicParsing="false" onAction="#clearDetails" prefHeight="30.0" prefWidth="182.0" style="-fx-background-radius: 20;" text="Clear Details">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Button>
+                                          <PasswordField fx:id="txt_password" layoutX="530.0" layoutY="259.0" prefHeight="25.0" prefWidth="217.0" promptText="Password" style="-fx-background-radius: 20;">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </PasswordField>
+                                          <ImageView fx:id="img_v" fitHeight="150.0" fitWidth="200.0" layoutX="33.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true">
+                                             <effect>
+                                                <DropShadow />
+                                             </effect>
+                                          </ImageView>
+                     </children>
+                  </AnchorPane>
+              </content>
+               <effect>
+                  <DropShadow>
+                     <input>
+                        <InnerShadow />
+                     </input>
+                  </DropShadow>
+               </effect>
+            </TitledPane>
+                              <TitledPane animated="false" layoutX="28.0" layoutY="32.0" prefHeight="411.0" prefWidth="318.0" text="SEARCH PATIENT">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <ImageView fitHeight="388.0" fitWidth="317.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../images/background.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Button fx:id="searchPatientDetailsByNameBtn" layoutX="73.0" layoutY="282.0" mnemonicParsing="false" onAction="#searchPatientDetailsByName" prefHeight="30.0" prefWidth="182.0" style="-fx-background-radius: 20;" text="Search By Patient Name">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="searchPersonsBtn2" layoutX="73.0" layoutY="239.0" mnemonicParsing="false" onAction="#searchPatientDetails" prefHeight="31.0" prefWidth="182.0" style="-fx-background-radius: 20;" text="Search By Patient No.">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="clearPatientIdBtn" layoutX="73.0" layoutY="323.0" mnemonicParsing="false" onAction="#clearPatientId" prefHeight="30.0" prefWidth="182.0" style="-fx-background-radius: 20;" text="Clear Search">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Button>
+                                          <TextField fx:id="patientId" alignment="CENTER" layoutX="73.0" layoutY="162.0" prefHeight="31.0" prefWidth="182.0" promptText="Search Record" style="-fx-background-radius: 20;">
+                                             <effect>
+                                                <DropShadow />
+                                             </effect>
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </TextField>
+                                          
+                                          <ImageView fitHeight="83.0" fitWidth="106.0" layoutX="111.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/red_plus.png" />
+                                             </image>
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                          </ImageView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                                 <effect>
+                                    <DropShadow>
+                                       <input>
+                                          <InnerShadow />
+                                       </input>
+                                    </DropShadow>
+                                 </effect>
+                              </TitledPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab fx:id="newRecordTab" text="Add New Health Record">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-radius: 20;">
+                           <children>
+                              <Button fx:id="viewTerrorAnalysisBtn" layoutY="544.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="182.0" style="-fx-background-radius: 20;" text="Terror Analysis">
+                                 <effect>
+                                    <DropShadow>
+                                       <input>
+                                          <InnerShadow />
+                                       </input>
+                                    </DropShadow>
+                                 </effect>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <TitledPane animated="false" layoutX="328.0" layoutY="31.0" prefHeight="412.0" prefWidth="993.0" text="ADD NEW RECORD">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <ImageView fitHeight="385.0" fitWidth="991.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../images/background.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <TextField fx:id="txt_patientNo" layoutX="241.0" layoutY="72.0" prefHeight="25.0" prefWidth="216.0" style="-fx-background-radius: 20;">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="Lucida Fax Regular" size="10.0" />
+                                             </font>
+                                          </TextField>
+                                          <Label layoutX="27.0" layoutY="75.0" style="-fx-background-radius: 20;" text="Patient No.">
+                                             <effect>
+                                                <Lighting>
+                                                   <bumpInput>
+                                                      <Shadow>
+                                                         <input>
+                                                            <Glow />
+                                                         </input>
+                                                      </Shadow>
+                                                   </bumpInput>
+                                                </Lighting>
+                                             </effect>
+                                             <font>
+                                                <Font name="Cambria" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="28.0" layoutY="119.0" style="-fx-background-radius: 20;" text="Full Name:">
+                                             <effect>
+                                                <Lighting>
+                                                   <bumpInput>
+                                                      <Shadow>
+                                                         <input>
+                                                            <Glow />
+                                                         </input>
+                                                      </Shadow>
+                                                   </bumpInput>
+                                                </Lighting>
+                                             </effect>
+                                             <font>
+                                                <Font name="Cambria" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="txt_full_name" layoutX="241.0" layoutY="115.0" prefHeight="25.0" prefWidth="216.0" style="-fx-background-radius: 20;">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="Lucida Fax" size="12.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField fx:id="txt_patient_id" layoutX="241.0" layoutY="163.0" prefHeight="25.0" prefWidth="216.0" style="-fx-background-radius: 20;">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="Lucida Fax" size="12.0" />
+                                             </font>
+                                          </TextField>
+                                          <Label layoutX="27.0" layoutY="166.0" style="-fx-background-radius: 20;" text="Patient ID:">
+                                             <effect>
+                                                <Lighting>
+                                                   <bumpInput>
+                                                      <Shadow>
+                                                         <input>
+                                                            <Glow />
+                                                         </input>
+                                                      </Shadow>
+                                                   </bumpInput>
+                                                </Lighting>
+                                             </effect>
+                                             <font>
+                                                <Font name="Cambria" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="27.0" layoutY="265.0" style="-fx-background-radius: 20;" text="Medic Assigned:">
+                                             <effect>
+                                                <Lighting>
+                                                   <bumpInput>
+                                                      <Shadow>
+                                                         <input>
+                                                            <Glow />
+                                                         </input>
+                                                      </Shadow>
+                                                   </bumpInput>
+                                                </Lighting>
+                                             </effect>
+                                             <font>
+                                                <Font name="Cambria" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="txt_medic" layoutX="241.0" layoutY="264.0" prefHeight="25.0" prefWidth="216.0" style="-fx-background-radius: 20;">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="Lucida Fax" size="12.0" />
+                                             </font>
+                                          </TextField>
+                                          <Label layoutX="27.0" layoutY="309.0" style="-fx-background-radius: 20;" text="Health Facility:">
+                                             <effect>
+                                                <Lighting>
+                                                   <bumpInput>
+                                                      <Shadow>
+                                                         <input>
+                                                            <Glow />
+                                                         </input>
+                                                      </Shadow>
+                                                   </bumpInput>
+                                                </Lighting>
+                                             </effect>
+                                             <font>
+                                                <Font name="Cambria" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="txt_health_facility" layoutX="241.0" layoutY="310.0" prefHeight="25.0" prefWidth="216.0" style="-fx-background-radius: 20;">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="Lucida Fax" size="12.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField fx:id="txt_duration" layoutX="705.0" layoutY="312.0" prefHeight="25.0" prefWidth="216.0" style="-fx-background-radius: 20;">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="Lucida Fax" size="12.0" />
+                                             </font>
+                                          </TextField>
+                                          <Label layoutX="520.0" layoutY="313.0" style="-fx-background-radius: 20;" text="Duration:">
+                                             <effect>
+                                                <Lighting>
+                                                   <bumpInput>
+                                                      <Shadow>
+                                                         <input>
+                                                            <Glow />
+                                                         </input>
+                                                      </Shadow>
+                                                   </bumpInput>
+                                                </Lighting>
+                                             </effect>
+                                             <font>
+                                                <Font name="Cambria" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="txt_discharged" layoutX="705.0" layoutY="267.0" prefHeight="25.0" prefWidth="216.0" style="-fx-background-radius: 20;">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="Lucida Fax" size="12.0" />
+                                             </font>
+                                          </TextField>
+                                          <Label layoutX="520.0" layoutY="269.0" style="-fx-background-radius: 20;" text="Time Discharged:">
+                                             <effect>
+                                                <Lighting>
+                                                   <bumpInput>
+                                                      <Shadow>
+                                                         <input>
+                                                            <Glow />
+                                                         </input>
+                                                      </Shadow>
+                                                   </bumpInput>
+                                                </Lighting>
+                                             </effect>
+                                             <font>
+                                                <Font name="Cambria" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="520.0" layoutY="223.0" style="-fx-background-radius: 20;" text="Time Admitted:">
+                                             <effect>
+                                                <Lighting>
+                                                   <bumpInput>
+                                                      <Shadow>
+                                                         <input>
+                                                            <Glow />
+                                                         </input>
+                                                      </Shadow>
+                                                   </bumpInput>
+                                                </Lighting>
+                                             </effect>
+                                             <font>
+                                                <Font name="Cambria" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="txt_admitted" layoutX="705.0" layoutY="222.0" prefHeight="25.0" prefWidth="216.0" style="-fx-background-radius: 20;">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="Lucida Fax" size="12.0" />
+                                             </font>
+                                          </TextField>
+                                          <Label layoutX="32.0" layoutY="214.0" style="-fx-background-radius: 20;" text="Category:">
+                                             <effect>
+                                                <Lighting>
+                                                   <bumpInput>
+                                                      <Shadow>
+                                                         <input>
+                                                            <Glow />
+                                                         </input>
+                                                      </Shadow>
+                                                   </bumpInput>
+                                                </Lighting>
+                                             </effect>
+                                             <font>
+                                                <Font name="Cambria" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="txt_category" layoutX="240.0" layoutY="212.0" prefHeight="25.0" prefWidth="216.0" style="-fx-background-radius: 20;">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="Lucida Fax" size="12.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField fx:id="txt_diagnosis" layoutX="702.0" layoutY="133.0" prefHeight="25.0" prefWidth="216.0" style="-fx-background-radius: 20;">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="Lucida Fax" size="12.0" />
+                                             </font>
+                                          </TextField>
+                                          <Label layoutX="517.0" layoutY="134.0" style="-fx-background-radius: 20;" text="Diagnosis:">
+                                             <effect>
+                                                <Lighting>
+                                                   <bumpInput>
+                                                      <Shadow>
+                                                         <input>
+                                                            <Glow />
+                                                         </input>
+                                                      </Shadow>
+                                                   </bumpInput>
+                                                </Lighting>
+                                             </effect>
+                                             <font>
+                                                <Font name="Cambria" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="517.0" layoutY="180.0" style="-fx-background-radius: 20;" text="Treatment:">
+                                             <effect>
+                                                <Lighting>
+                                                   <bumpInput>
+                                                      <Shadow>
+                                                         <input>
+                                                            <Glow />
+                                                         </input>
+                                                      </Shadow>
+                                                   </bumpInput>
+                                                </Lighting>
+                                             </effect>
+                                             <font>
+                                                <Font name="Cambria" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="txt_treatment" layoutX="702.0" layoutY="178.0" prefHeight="25.0" prefWidth="216.0" style="-fx-background-radius: 20;">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="Lucida Fax" size="12.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextArea fx:id="txt_symptoms" layoutX="702.0" layoutY="52.0" prefHeight="68.0" prefWidth="215.0" wrapText="true">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                          <Label layoutX="517.0" layoutY="75.0" style="-fx-background-radius: 20;" text="Symptoms:">
+                                             <effect>
+                                                <Lighting>
+                                                   <bumpInput>
+                                                      <Shadow>
+                                                         <input>
+                                                            <Glow />
+                                                         </input>
+                                                      </Shadow>
+                                                   </bumpInput>
+                                                </Lighting>
+                                             </effect>
+                                             <font>
+                                                <Font name="Cambria" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                                 <effect>
+                                    <DropShadow>
+                                       <input>
+                                          <InnerShadow />
+                                       </input>
+                                    </DropShadow>
+                                 </effect>
+                              </TitledPane>
+                              <TitledPane animated="false" layoutY="32.0" prefHeight="411.0" prefWidth="318.0" text="ACTION">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <ImageView fitHeight="388.0" fitWidth="317.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../images/background.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="83.0" fitWidth="106.0" layoutX="111.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <image>
+                                                <Image url="@../images/red_plus.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Button fx:id="saveHealthRecordBtn" layoutX="74.0" layoutY="177.0" mnemonicParsing="false" onAction="#saveHealthRecord" prefHeight="31.0" prefWidth="182.0" style="-fx-background-radius: 20;" text="Save Patient Details">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="clearHealthRecordBtn" layoutX="74.0" layoutY="223.0" mnemonicParsing="false" onAction="#clearHealthRecord" prefHeight="30.0" prefWidth="182.0" style="-fx-background-radius: 20;" text="Clear Details">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                                 <effect>
+                                    <DropShadow>
+                                       <input>
+                                          <InnerShadow />
+                                       </input>
+                                    </DropShadow>
+                                 </effect>
+                              </TitledPane>
+                           </children>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab fx:id="transactionsTab" text="Transactions">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-radius: 20;">
+                           <effect>
+                              <DropShadow>
+                                 <input>
+                                    <InnerShadow />
+                                 </input></DropShadow>
+                           </effect>
+                           <children>
+                              <TitledPane animated="false" layoutX="8.0" layoutY="39.0" prefHeight="411.0" prefWidth="284.0" text="ACTION">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <ImageView fitHeight="388.0" fitWidth="317.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../images/background.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="83.0" fitWidth="106.0" layoutX="81.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <image>
+                                                <Image url="@../images/red_plus.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Button fx:id="searchHealthRecordBtn1" layoutX="50.0" layoutY="159.0" mnemonicParsing="false" onAction="#searchHealthRecord" prefHeight="31.0" prefWidth="182.0" style="-fx-background-radius: 20;" text="Search By Patient ID">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="clearFieldsBtn" layoutX="50.0" layoutY="205.0" mnemonicParsing="false" onAction="#clearFields" prefHeight="30.0" prefWidth="182.0" style="-fx-background-radius: 20;" text="Clear Details">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Button>
+                                          <TextField fx:id="patientId1" alignment="CENTER" layoutX="50.0" layoutY="103.0" prefHeight="31.0" prefWidth="182.0" promptText="Search Record" style="-fx-background-radius: 20;">
+                                             <effect>
+                                                <DropShadow />
+                                             </effect>
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </TextField>
+                                          <Button fx:id="generateTransactionReceiptBtn" layoutX="50.0" layoutY="322.0" mnemonicParsing="false" onAction="#showReport" prefHeight="30.0" prefWidth="182.0" style="-fx-background-radius: 20;" text="Generate Receipt">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="saveTransactionBtn" layoutX="50.0" layoutY="277.0" mnemonicParsing="false" onAction="#saveTransaction" prefHeight="30.0" prefWidth="182.0" style="-fx-background-radius: 20;" text="Save Transaction">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                                 <effect>
+                                    <DropShadow>
+                                       <input>
+                                          <InnerShadow />
+                                       </input>
+                                    </DropShadow>
+                                 </effect>
+                              </TitledPane>
+                              <TitledPane animated="false" layoutX="334.0" layoutY="38.0" prefHeight="412.0" prefWidth="993.0" text="FILL DETAILS">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <ImageView fitHeight="385.0" fitWidth="991.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../images/background.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <TextField fx:id="txt_patientNo1" editable="false" layoutX="206.0" layoutY="14.0" prefHeight="25.0" prefWidth="249.0" style="-fx-background-radius: 20;">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="Lucida Fax Regular" size="10.0" />
+                                             </font>
+                                          </TextField>
+                                          <Label layoutX="25.0" layoutY="17.0" style="-fx-background-radius: 20;" text="Patient No.">
+                                             <effect>
+                                                <Lighting>
+                                                   <bumpInput>
+                                                      <Shadow>
+                                                         <input>
+                                                            <Glow />
+                                                         </input>
+                                                      </Shadow>
+                                                   </bumpInput>
+                                                </Lighting>
+                                             </effect>
+                                             <font>
+                                                <Font name="Cambria" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="26.0" layoutY="61.0" style="-fx-background-radius: 20;" text="Full Name:">
+                                             <effect>
+                                                <Lighting>
+                                                   <bumpInput>
+                                                      <Shadow>
+                                                         <input>
+                                                            <Glow />
+                                                         </input>
+                                                      </Shadow>
+                                                   </bumpInput>
+                                                </Lighting>
+                                             </effect>
+                                             <font>
+                                                <Font name="Cambria" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="txt_full_name1" layoutX="206.0" layoutY="57.0" prefHeight="25.0" prefWidth="249.0" style="-fx-background-radius: 20;">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="Lucida Fax" size="12.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField fx:id="txt_patient_id1" editable="false" layoutX="206.0" layoutY="107.0" prefHeight="25.0" prefWidth="248.0" style="-fx-background-radius: 20;">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="Lucida Fax" size="12.0" />
+                                             </font>
+                                          </TextField>
+                                          <Label layoutX="25.0" layoutY="108.0" style="-fx-background-radius: 20;" text="Patient ID:">
+                                             <effect>
+                                                <Lighting>
+                                                   <bumpInput>
+                                                      <Shadow>
+                                                         <input>
+                                                            <Glow />
+                                                         </input>
+                                                      </Shadow>
+                                                   </bumpInput>
+                                                </Lighting>
+                                             </effect>
+                                             <font>
+                                                <Font name="Cambria" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="506.0" layoutY="324.0" style="-fx-background-radius: 20;" text="Served By:">
+                                             <effect>
+                                                <Lighting>
+                                                   <bumpInput>
+                                                      <Shadow>
+                                                         <input>
+                                                            <Glow />
+                                                         </input>
+                                                      </Shadow>
+                                                   </bumpInput>
+                                                </Lighting>
+                                             </effect>
+                                             <font>
+                                                <Font name="Cambria" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="txt_served_by" layoutX="694.0" layoutY="324.0" prefHeight="25.0" prefWidth="218.0" style="-fx-background-radius: 20;">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="Lucida Fax" size="12.0" />
+                                             </font>
+                                          </TextField>
+                                          <Label layoutX="25.0" layoutY="251.0" style="-fx-background-radius: 20;" text="Health Facility:">
+                                             <effect>
+                                                <Lighting>
+                                                   <bumpInput>
+                                                      <Shadow>
+                                                         <input>
+                                                            <Glow />
+                                                         </input>
+                                                      </Shadow>
+                                                   </bumpInput>
+                                                </Lighting>
+                                             </effect>
+                                             <font>
+                                                <Font name="Cambria" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="txt_health_facility1" layoutX="210.0" layoutY="250.0" prefHeight="25.0" prefWidth="248.0" style="-fx-background-radius: 20;">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="Lucida Fax" size="12.0" />
+                                             </font>
+                                          </TextField>
+                                          <Label layoutX="506.0" layoutY="196.0" style="-fx-background-radius: 20;" text="Others Charges:">
+                                             <effect>
+                                                <Lighting>
+                                                   <bumpInput>
+                                                      <Shadow>
+                                                         <input>
+                                                            <Glow />
+                                                         </input>
+                                                      </Shadow>
+                                                   </bumpInput>
+                                                </Lighting>
+                                             </effect>
+                                             <font>
+                                                <Font name="Cambria" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="506.0" layoutY="152.0" style="-fx-background-radius: 20;" text="Medicine Cost:">
+                                             <effect>
+                                                <Lighting>
+                                                   <bumpInput>
+                                                      <Shadow>
+                                                         <input>
+                                                            <Glow />
+                                                         </input>
+                                                      </Shadow>
+                                                   </bumpInput>
+                                                </Lighting>
+                                             </effect>
+                                             <font>
+                                                <Font name="Cambria" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="503.0" layoutY="59.0" style="-fx-background-radius: 20;" text="Consultation Fee:">
+                                             <effect>
+                                                <Lighting>
+                                                   <bumpInput>
+                                                      <Shadow>
+                                                         <input>
+                                                            <Glow />
+                                                         </input>
+                                                      </Shadow>
+                                                   </bumpInput>
+                                                </Lighting>
+                                             </effect>
+                                             <font>
+                                                <Font name="Cambria" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="25.0" layoutY="156.0" prefHeight="22.0" prefWidth="84.0" style="-fx-background-radius: 20;" text="Category:">
+                                             <effect>
+                                                <Lighting>
+                                                   <bumpInput>
+                                                      <Shadow>
+                                                         <input>
+                                                            <Glow />
+                                                         </input>
+                                                      </Shadow>
+                                                   </bumpInput>
+                                                </Lighting>
+                                             </effect>
+                                             <font>
+                                                <Font name="Cambria" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="txt_category1" editable="false" layoutX="210.0" layoutY="155.0" prefHeight="25.0" prefWidth="244.0" style="-fx-background-radius: 20;">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="Lucida Fax" size="12.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField fx:id="txt_diagnosis1" editable="false" layoutX="688.0" layoutY="16.0" prefHeight="25.0" prefWidth="212.0" style="-fx-background-radius: 20;">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="Lucida Fax" size="12.0" />
+                                             </font>
+                                          </TextField>
+                                          <Label layoutX="503.0" layoutY="17.0" style="-fx-background-radius: 20;" text="Diagnosis:">
+                                             <effect>
+                                                <Lighting>
+                                                   <bumpInput>
+                                                      <Shadow>
+                                                         <input>
+                                                            <Glow />
+                                                         </input>
+                                                      </Shadow>
+                                                   </bumpInput>
+                                                </Lighting>
+                                             </effect>
+                                             <font>
+                                                <Font name="Cambria" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="506.0" layoutY="107.0" style="-fx-background-radius: 20;" text="Treatment Cost:">
+                                             <effect>
+                                                <Lighting>
+                                                   <bumpInput>
+                                                      <Shadow>
+                                                         <input>
+                                                            <Glow />
+                                                         </input>
+                                                      </Shadow>
+                                                   </bumpInput>
+                                                </Lighting>
+                                             </effect>
+                                             <font>
+                                                <Font name="Cambria" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextArea fx:id="txt_symptoms1" editable="false" layoutX="210.0" layoutY="290.0" prefHeight="68.0" prefWidth="250.0" wrapText="true">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                          </TextArea>
+                                          <Label layoutX="25.0" layoutY="313.0" style="-fx-background-radius: 20;" text="Symptoms:">
+                                             <effect>
+                                                <Lighting>
+                                                   <bumpInput>
+                                                      <Shadow>
+                                                         <input>
+                                                            <Glow />
+                                                         </input>
+                                                      </Shadow>
+                                                   </bumpInput>
+                                                </Lighting>
+                                             </effect>
+                                             <font>
+                                                <Font name="Cambria" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="txt_treatment_amt" layoutX="692.0" layoutY="107.0" prefHeight="25.0" prefWidth="133.0" style="-fx-background-radius: 20;">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="Lucida Fax" size="12.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField fx:id="txt_consultation_amt" layoutX="689.0" layoutY="60.0" prefHeight="25.0" prefWidth="130.0" style="-fx-background-radius: 20;">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="Lucida Fax" size="12.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField fx:id="txt_medicine_amt" layoutX="692.0" layoutY="152.0" prefHeight="25.0" prefWidth="130.0" style="-fx-background-radius: 20;">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="Lucida Fax" size="12.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField fx:id="txt_others_amt" layoutX="692.0" layoutY="195.0" prefHeight="25.0" prefWidth="130.0" style="-fx-background-radius: 20;">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="Lucida Fax" size="12.0" />
+                                             </font>
+                                          </TextField>
+                                          <Label layoutX="503.0" layoutY="281.0" style="-fx-background-radius: 20;" text="Balance:">
+                                             <effect>
+                                                <Lighting>
+                                                   <bumpInput>
+                                                      <Shadow>
+                                                         <input>
+                                                            <Glow />
+                                                         </input>
+                                                      </Shadow>
+                                                   </bumpInput>
+                                                </Lighting>
+                                             </effect>
+                                             <font>
+                                                <Font name="Cambria" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="txt_balance" layoutX="694.0" layoutY="279.0" prefHeight="25.0" prefWidth="128.0" style="-fx-background-radius: 20;">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="Lucida Fax" size="12.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                                 <effect>
+                                    <DropShadow>
+                                       <input>
+                                          <InnerShadow />
+                                       </input>
+                                    </DropShadow>
+                                 </effect>
+                              </TitledPane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab fx:id="consultationsTab" text="Online Consultations">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <effect>
+                              <DropShadow>
+                                 <input>
+                                    <InnerShadow />
+                                 </input>
+                              </DropShadow>
+                           </effect>
+                           <children>
+                              <TableView fx:id="consultationsTable" layoutX="219.0" layoutY="6.0" maxHeight="600.0" maxWidth="1.7976931348623157E308" minHeight="100.0" prefHeight="358.0" prefWidth="1108.0" style="-fx-background-radius: 20;">
+                                 <columns>
+                                    <TableColumn id="category" fx:id="tc_id" minWidth="0.0" prefWidth="38.0" text="Id" />
+                                    <TableColumn id="category" fx:id="tc_patient_no" minWidth="0.0" prefWidth="120.0" text="Patient No." />
+                                    <TableColumn id="category" fx:id="tc_nhif_no" minWidth="0.0" prefWidth="131.0" text="NHIF Card No." />
+                                    <TableColumn fx:id="tc_symptoms" minWidth="4.0" prefWidth="226.0" text="Symptoms " />
+                                    <TableColumn fx:id="tc_duration" prefWidth="107.0" text="Duration" />
+                                    <TableColumn fx:id="tc_treatment" prefWidth="170.0" text="Treatment" />
+                                    <TableColumn fx:id="tc_medical_advice" minWidth="0.0" prefWidth="177.0" text="Medical Advice" />
+                                    <TableColumn fx:id="tc_medic" prefWidth="133.0" text="Medic" />
+                                 </columns>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </TableView>
+                              <TitledPane animated="false" prefHeight="363.0" prefWidth="206.0" text="ACTION">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <ImageView fitHeight="341.0" fitWidth="206.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../images/background.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="83.0" fitWidth="106.0" layoutX="49.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <image>
+                                                <Image url="@../images/red_plus.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Button fx:id="loadByIdBtn" layoutX="11.0" layoutY="181.0" mnemonicParsing="false" onAction="#loadById" prefHeight="31.0" prefWidth="182.0" style="-fx-background-radius: 20;" text="Load By Id">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="saveDetailsBtn" layoutX="11.0" layoutY="293.0" mnemonicParsing="false" onAction="#saveDetails" prefHeight="30.0" prefWidth="182.0" style="-fx-background-radius: 20;" text="Save Details">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Button>
+                                          <TextField fx:id="Id" alignment="CENTER" layoutX="11.0" layoutY="138.0" prefHeight="31.0" prefWidth="182.0" promptText="Search Record" style="-fx-background-radius: 20;">
+                                             <effect>
+                                                <DropShadow />
+                                             </effect>
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </TextField>
+                                          <Button fx:id="clearBtn" layoutX="11.0" layoutY="224.0" mnemonicParsing="false" onAction="#clear" prefHeight="31.0" prefWidth="182.0" style="-fx-background-radius: 20;" text="Clear">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="loadConsultationsBtn" layoutX="11.0" layoutY="8.0" mnemonicParsing="false" onAction="#loadConsultations" prefHeight="31.0" prefWidth="182.0" style="-fx-background-radius: 20;" text="Load Consultations">
+                                             <effect>
+                                                <DropShadow>
+                                                   <input>
+                                                      <InnerShadow />
+                                                   </input>
+                                                </DropShadow>
+                                             </effect>
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                                 <effect>
+                                    <DropShadow>
+                                       <input>
+                                          <InnerShadow />
+                                       </input>
+                                    </DropShadow>
+                                 </effect>
+                              </TitledPane>
+                              <TextField fx:id="txt_med_advice" layoutX="664.0" layoutY="404.0" prefHeight="25.0" prefWidth="217.0" style="-fx-background-radius: 20;">
+                                 <effect>
+                                    <DropShadow>
+                                       <input>
+                                          <InnerShadow />
+                                       </input>
+                                    </DropShadow>
+                                 </effect>
+                                 <font>
+                                    <Font name="Lucida Fax" size="12.0" />
+                                 </font>
+                              </TextField>
+                              <Label layoutX="525.0" layoutY="407.0" prefHeight="19.0" prefWidth="115.0" style="-fx-background-radius: 20;" text="Medical Advice:">
+                                 <effect>
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow>
+                                             <input>
+                                                <Glow />
+                                             </input>
+                                          </Shadow>
+                                       </bumpInput>
+                                    </Lighting>
+                                 </effect>
+                                 <font>
+                                    <Font name="Cambria" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lb_medic" layoutX="919.0" layoutY="407.0" style="-fx-background-radius: 20;" text="Medic:">
+                                 <effect>
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow>
+                                             <input>
+                                                <Glow />
+                                             </input>
+                                          </Shadow>
+                                       </bumpInput>
+                                    </Lighting>
+                                 </effect>
+                                 <font>
+                                    <Font name="Cambria" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txt_medic_advice" layoutX="1024.0" layoutY="404.0" prefHeight="25.0" prefWidth="303.0" style="-fx-background-radius: 20;">
+                                 <effect>
+                                    <DropShadow>
+                                       <input>
+                                          <InnerShadow />
+                                       </input>
+                                    </DropShadow>
+                                 </effect>
+                                 <font>
+                                    <Font name="Lucida Fax" size="12.0" />
+                                 </font>
+                              </TextField>
+                              <Label layoutX="14.0" layoutY="407.0" prefHeight="19.0" prefWidth="21.0" style="-fx-background-radius: 20;" text="Id:">
+                                 <effect>
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow>
+                                             <input>
+                                                <Glow />
+                                             </input>
+                                          </Shadow>
+                                       </bumpInput>
+                                    </Lighting>
+                                 </effect>
+                                 <font>
+                                    <Font name="Cambria" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="136.0" layoutY="407.0" prefHeight="7.0" prefWidth="77.0" style="-fx-background-radius: 20;" text="Symptoms:">
+                                 <effect>
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow>
+                                             <input>
+                                                <Glow />
+                                             </input>
+                                          </Shadow>
+                                       </bumpInput>
+                                    </Lighting>
+                                 </effect>
+                                 <font>
+                                    <Font name="Cambria" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextArea fx:id="txt_symptoms_advice" editable="false" layoutX="223.0" layoutY="385.0" prefHeight="68.0" prefWidth="290.0" wrapText="true">
+                                 <effect>
+                                    <DropShadow>
+                                       <input>
+                                          <InnerShadow />
+                                       </input>
+                                    </DropShadow>
+                                 </effect>
+                              </TextArea>
+                              <TextField fx:id="txt_id_advice" editable="false" layoutX="40.0" layoutY="407.0" prefHeight="25.0" prefWidth="86.0" style="-fx-background-radius: 20;">
+                                 <effect>
+                                    <DropShadow>
+                                       <input>
+                                          <InnerShadow />
+                                       </input>
+                                    </DropShadow>
+                                 </effect>
+                                 <font>
+                                    <Font name="Lucida Fax" size="12.0" />
+                                 </font>
+                              </TextField>
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+               <effect>
+                  <DropShadow>
+                     <input>
+                        <InnerShadow />
+                     </input></DropShadow>
+               </effect>
+            </TabPane>
+            <ImageView fitHeight="59.0" fitWidth="60.0" layoutX="670.0" layoutY="20.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../images/blue_h.png" />
+               </image>
+               <effect>
+                  <DropShadow>
+                     <input>
+                        <InnerShadow />
+                     </input>
+                  </DropShadow>
+               </effect>
+            </ImageView>
+         </children>
+         <effect>
+            <InnerShadow>
+               <input>
+                  <DropShadow />
+               </input>
+            </InnerShadow>
+         </effect>
+      </AnchorPane>
+   </center>
+</BorderPane>

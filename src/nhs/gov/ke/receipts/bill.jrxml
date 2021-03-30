@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" whenNoDataType="NoPages" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ce994e00-0639-4c40-8f26-592fa7c4a527">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<subDataset name="Empty Dataset1" uuid="6e025697-fb93-43e5-a39b-702da9f025d2"/>
+	<queryString>
+		<![CDATA[SELECT * FROM transactions_tb WHERE patient_id='';]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="patient_no" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="patient_id" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="category" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="health_facility" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="diagnosis" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="symptoms" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="consultation_fee" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="treatment" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="medication" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="other_charges" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="served_by" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="balance" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="entry_time" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="153" splitType="Stretch">
+			<staticText>
+				<reportElement x="26" y="0" width="512" height="35" uuid="77ebc233-4a7d-4ddb-a88f-4256e4474e3d"/>
+				<textElement>
+					<font fontName="Times New Roman" size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[THE NATIONAL HEALTH SYSTEM (NHS)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="211" y="30" width="143" height="23" uuid="159c1fd9-9511-453c-8de2-4ee1813636f9"/>
+				<textElement>
+					<font fontName="Tahoma" size="18"/>
+				</textElement>
+				<text><![CDATA[Ministry of Health]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="92" y="55" width="370" height="20" uuid="151570d1-6c0f-4a69-abb8-9a0f2ba74612"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Afya House, Cathedral Rd. P.O. Box 30016-00100 NAIROBI, KENYA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="75" width="258" height="20" uuid="a215d411-830f-4c90-8a75-885ebd164d95"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Tel. +254-20-2717077 Email: ps@health.go.ke]]></text>
+			</staticText>
+			<textField pattern="EEE, d MMM yyyy HH:mm:ss Z">
+				<reportElement x="390" y="100" width="166" height="20" uuid="c1febfaf-9ecf-440a-b04d-c548c27e6709"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="173" y="113" width="217" height="37" uuid="b8468caa-ad33-4295-88f1-644f09063c4f">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Medical Bill Receipt]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="150" width="555" height="1" uuid="55ae050a-8059-4c22-8c8e-080828b8832a"/>
+			</line>
+			<image>
+				<reportElement x="-1" y="71" width="79" height="79" uuid="bfc60a59-786d-4ce3-b5b3-136fc01ada67"/>
+				<imageExpression><![CDATA["C:\\Users\\Jorginho\\Documents\\NetBeansProjects\\nhs\\src\\nhs\\gov\\ke\\images\\blue_h.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="1" splitType="Stretch">
+			<staticText>
+				<reportElement x="51" y="0" width="100" height="1" uuid="82c97bda-a98a-43b0-ac76-a61100a5ed47">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f5b77724-f397-418e-bfb2-d794e382f7c5"/>
+				</reportElement>
+				<text><![CDATA[patient_id]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="620" splitType="Stretch">
+			<staticText>
+				<reportElement x="-1" y="0" width="183" height="30" uuid="70a7508d-027b-44a7-bf7d-82e7b5406125"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PERSONAL INFORMATION]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="280" y="60" width="200" height="20" uuid="683e6c2e-8988-425f-acad-82b751a8b6fd"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="281" y="30" width="200" height="20" uuid="8405a922-c60e-4d78-a337-d584da85b54c"/>
+				<textElement>
+					<font size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="-1" y="70" width="183" height="20" uuid="c067c1f3-1c75-4d05-9691-543a9ec1ac1f"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patient_no}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-1" y="40" width="183" height="17" uuid="3c73de78-3e37-4b42-b1b7-1cf1d5accaf2"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Patient No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="130" width="200" height="20" uuid="e5743364-3937-49b2-838f-4b14ee0d5988"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Health Facility]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="280" y="160" width="200" height="20" uuid="a43e1354-a763-4e47-b71b-b4a9f6ebdbe7"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{health_facility}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="206" width="180" height="30" uuid="5ee299fc-0c5d-4cba-bb92-c0d930ea1b8d"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HEALTH INFORMATION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="250" width="180" height="20" uuid="dd2a9a6e-9ece-41f9-bab3-9e722c18b824"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Category]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="277" y="250" width="200" height="22" uuid="4b4cfca6-dc18-4b2c-b6a6-c03eb8652113"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Diagnosis]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="280" width="180" height="20" uuid="158e7eef-0e21-4fc8-9197-8f0b3dac5e42">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="60a76be1-6d17-4a0e-8b16-ee8e1f84bbed"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{category}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="277" y="280" width="200" height="20" uuid="49592f1b-5bdb-4d03-8de4-9cc11a191b8b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3d008746-29be-4c5a-8fad-257fcd7b01fd"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{diagnosis}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="310" width="180" height="20" uuid="b0e5bfc2-8173-41ef-b59f-4c8a99b08d26"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Symptoms]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="3" y="340" width="549" height="30" uuid="809c7be7-da0c-4fd0-a03c-48b8acf0f28e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="27acdc9f-4305-4ff6-856c-062f7cb01403"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{symptoms}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-4" y="378" width="177" height="30" uuid="e0f34345-1edb-4eb2-b9c2-097227e2e615"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BILL INFORMATION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="428" width="269" height="30" uuid="662d1def-a580-45a3-bda7-6c903d8f4e27"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Consultation Fee............................................................]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="420" y="428" width="125" height="30" uuid="65fd6f30-eb8a-4d7f-949b-8779b71ed60c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="edb96a00-5b34-442a-88d6-82341f39c381"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{consultation_fee}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="460" width="270" height="30" uuid="831f9eb8-25e2-43b1-81eb-08eb53cb3b04"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Treatment ...................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="490" width="270" height="30" uuid="f1607b98-6714-476b-831f-2cc9a19cdb04"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Medicine ...............................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="520" width="269" height="30" uuid="e7061f18-68bf-4312-9339-4798342da4ae"/>
+				<text><![CDATA[Other Charges ..............................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="550" width="269" height="30" uuid="b88beb65-9c3f-40e2-a345-de7cb115fa57"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Balance ............................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="580" width="70" height="30" uuid="cee8eaba-e076-453d-a971-6ffc963fbc4e"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Served by...]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="580" width="200" height="30" uuid="d30d9eac-914a-4fd4-ab62-51dd964bbb01">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="60290a76-5733-441d-bc10-f82b7e88e858"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{served_by}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="281" y="580" width="264" height="30" uuid="423ee27c-074c-4485-9570-623fa278d775"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Signature & Stamp............................................]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="420" y="460" width="125" height="30" uuid="57c34ee6-4126-448b-a208-60c6dc421311">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="83466843-237e-4b4e-8caa-ae7a68564280"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{treatment}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="490" width="125" height="30" uuid="c8045212-2329-42f8-8db9-d455871ec4c8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="61e7dbde-7b3d-454d-8fe7-6248750a3c55"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{medication}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="520" width="125" height="30" uuid="050a7c00-5674-4e35-883d-510728d2e727">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="48e3e678-c737-4aec-a906-e344e21914a9"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{other_charges}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="550" width="125" height="30" uuid="225f1a30-3efe-4f4d-956c-161a212ee0c4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="23522fc3-1c03-40cf-8c5f-1b597fbfcf1c"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{balance}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-1" y="100" width="183" height="30" uuid="f9e1add2-67f3-4dbc-b7bc-73c8bd5cb451"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HOSPITAL INFORMATION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="130" width="179" height="20" uuid="12d5d7a6-e8af-49c6-ac4f-483af63a39fc"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Patient Id.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="3" y="160" width="179" height="20" uuid="8b7441be-d458-4de9-8c4e-34eb0b296c9e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f5b77724-f397-418e-bfb2-d794e382f7c5"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patient_id}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="433" y="0" width="77" height="20" uuid="31be8950-6593-4e67-9570-8f4905ae3ff1"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="515" y="0" width="40" height="20" uuid="d37f11da-1961-4edf-9944-1af4662bf12a"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

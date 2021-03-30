@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane id="AnchorPane" maxHeight="400.0" maxWidth="800.0" minHeight="400.0" minWidth="800.0" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nhs.gov.ke.view.HomeController">
+   <top>
+      <AnchorPane prefHeight="400.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="400.0" fitWidth="861.0" layoutX="-5.0" layoutY="-1.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../images/background.jpg" />
+               </image>
+               <effect>
+                  <DropShadow>
+                     <input>
+                        <InnerShadow />
+                     </input>
+                  </DropShadow>
+               </effect>
+            </ImageView>
+            <Label fx:id="title" alignment="CENTER" layoutX="26.0" layoutY="14.0" prefHeight="81.0" prefWidth="800.0" text="National Health System" textAlignment="CENTER">
+               <font>
+                  <Font name="Modern No. 20" size="55.0" />
+               </font>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Glow>
+                           <input>
+                              <Shadow />
+                           </input>
+                        </Glow>
+                     </bumpInput>
+                     <contentInput>
+                        <DropShadow />
+                     </contentInput>
+                  </Lighting>
+               </effect>
+               <textFill>
+                  <RadialGradient centerX="0.7388888888888889" radius="0.5">
+                     <stops>
+                        <Stop color="#ebe5e5" />
+                        <Stop color="CYAN" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+            <Hyperlink fx:id="copyrightStatement" layoutX="149.0" layoutY="358.0" text="Copyright © 2019. The National Health System (NHS). All rights reserved." textAlignment="CENTER">
+               <font>
+                  <Font name="Modern No. 20" size="18.0" />
+               </font>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Glow>
+                           <input>
+                              <Shadow />
+                           </input>
+                        </Glow>
+                     </bumpInput>
+                  </Lighting>
+               </effect>
+               <textFill>
+                  <RadialGradient centerX="0.7388888888888889" radius="0.5">
+                     <stops>
+                        <Stop color="#ebe5e5" />
+                        <Stop color="BLACK" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Hyperlink>
+            <ImageView fitHeight="89.0" fitWidth="86.0" layoutX="385.0" layoutY="121.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../images/blue_h.png" />
+               </image>
+               <effect>
+                  <DropShadow>
+                     <input>
+                        <InnerShadow />
+                     </input>
+                  </DropShadow>
+               </effect>
+            </ImageView>
+            <ProgressIndicator fx:id="progressIndicator" layoutX="390.0" layoutY="243.0" prefHeight="79.0" prefWidth="71.0">
+               <effect>
+                  <DropShadow>
+                     <input>
+                        <InnerShadow />
+                     </input>
+                  </DropShadow>
+               </effect>
+            </ProgressIndicator>
+         </children>
+         <effect>
+            <DropShadow>
+               <input>
+                  <InnerShadow />
+               </input>
+            </DropShadow>
+         </effect>
+      </AnchorPane>
+   </top>
+</BorderPane>
